@@ -1,0 +1,256 @@
+%-------------------------
+% Resume in Latex
+% Author : Arjun Chintapalli
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{lipsum}
+
+\newcommand\textbox[1]{%
+  \parbox{.333\textwidth}{#1}%
+}
+
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{scalerel,amssymb}
+\def\mcirc{\mathbin{\scalerel*{\circ}{j}}}
+\def\msquare{\mathord{\scalerel*{\Box}{gX}}}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-12pt}\scshape\raggedright\large\textbf
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\newcommand{\localtextbulletwo}{\textcolor{white}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\renewcommand{\labelitemii}{$\Hsquare$}
+\renewcommand{\labelitemi}{\localtextbulletone}
+\newcommand{\Hsquare}{%
+  \text{\fboxsep=-.2pt\fbox{\rule{0pt}{1ex}\rule{1ex}{0pt}}}%
+}
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumebullet}[1]{
+  \item\small{{#1 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSub}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{L@{\extracolsep{\fill}} L R }
+       \textbf{#1} & {\textit{\textbf{#2}}} & {\textbf{#3}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubMain}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l l @{\extracolsep{\fill}} r}
+      \textbf{#1} & \textit{{#2}} & \hfill{\textbf{#3}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Huge Arjun Chintapalli} & Email: \href{mailto:arjun.chintapalli@utexas.edu}{arjun.chintapalli@utexas.edu}\\
+  %\textbf{\href{http://sourabhbajaj.com/}{\Large Arjun Chintapalli}} & Email : \href{mailto:arjun.chintapalli@utexas.edu}{arjun.chintapalli@utexas.edu}\\
+  {Plano, TX [U.S. Citizen]} & Phone: 469-525-5785 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+
+\section{Education}
+% \vspace{-5pt}
+{\bf Georgia Institute of Technology} \hfill{\bf \em Online M.S., Computer Science} \hfill {\bf December 2018} \\
+{\bf Georgia Institute of Technology} \hfill{\bf \em M.S., Computational Engineering} \hfill {\bf December 2017} \\
+{\bf University of Texas at Austin} \hfill{\bf \em B.S., Petroleum Engineering Honors} \hfill {\bf May 2016} \\
+    % \resumeSub
+    %   {Georgia Institute of Technology}{Online M.S., Computer Science                        }{December 2018}
+    %  \resumeSub
+    %   {Georgia Institute of Technology}{M.S., Computational Engineering}{December 2017}
+    % \resumeSub
+    %   {University of Texas at Austin}{B.S., Petroleum Engineering Honors}{May 2016}
+      
+    % \vspace{5pt}
+    \textbf{Certifications:} AWS Big Data, AWS Solutions Architect, AWS Developer, AWS SysOps, Engineer-in-Training \\
+    \vspace{-2pt}
+    \textbf{Courses:} Machine Learning, ML for Trading, Reinforcement Learning, Algorithms, Numerical Linear Algebra, Parallel HPC, Simulation, CFD, Machine Vision, Data Analytics/Visualization, Info Security, Big Data w/ Spark
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubMain
+      {Data Engineer }{- Capital One}{January 2018 - Present}
+    \resumeItemListStart
+    % \resumeItem{Cloud Migration}
+    %       {Setup AW for cloud/Spark migration of Ab Initio ETL pipeline}
+        \resumebullet{Setup AWS infrastructure to implement cloud/Spark migration of Ab Initio ETL pipeline}
+        \resumebullet{Deployed SQL recommendation and monitoring engine to reduce Snowflake compute costs using AWS Lambda}
+        % \resumebullet{Worked in AWS platform team to implement cloud/Spark migration of Ab Initio ETL pipeline}
+        \resumebullet{Created enterprise data pipeline that matches/decrypts/renames files landing in S3 data lake and triggers ETL jobs}
+        \resumebullet{Released process to stream S3 Read/KMS Decrypt/Write +100 GB files from data lake using S3 Events/Lambda}
+        \resumebullet{Setup regex catalog of 1000+ file patterns to match/capture/rename incoming S3 files and trigger relevant jobs}
+        % \resumebullet{Developed regex file renaming to automatically rename and trigger 1000's of filename patterns daily}
+        % \resumebullet{Developed regex file renaming to match/capture/rename filepaths to automatically transfer/rename 1000's of filename pattern}
+        \resumebullet{Implemented PiT DR failover/recovery by tracking processed files using SNS, DynamoDB and Lambda}
+        \resumebullet{Released SSN/PCI scanner to scan outgoing files/data directories periodically for sensitive data}
+        \resumebullet{Automated ASG deployment, software installation and data recovery using CFT's, Lambdas, Snapshots}
+        \resumebullet{Created Lambda to EC2 snapshot backup, tag and copy to DR and EC2 restoration/mounting scripts}
+
+        % \resumeItem{Tensorflow}
+        %   {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models. Worked on APIs and performance for training models on Tensor Processing Units (TPU).}
+        % \resumeItem{Apache Beam}
+        %   {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+      \resumeItemListEnd
+    \resumeSubMain
+      {Drilling Data Intern}{- Intellicess}{January 2017 - August 2017}
+    \resumeItemListStart
+        \resumebullet{Developed a real-time MongoDB cloud database to provide drilling metric visualizations from rig data}
+        \resumebullet{Improved Bayesian rig state classifier and washout belief predictor using real time sensor data}
+        \resumebullet{Developed a well completions recommendation system based on lateral downhole MSE data}
+        \resumebullet{Created real-time drilling efficiency metrics and rig parameter recommendation system to fasten drilling}
+      \resumeItemListEnd
+      
+   \resumeSubMain
+      {Reservoir Engineering Intern }{- Raisa Energy}{June 2015 - August 2015}
+    \resumeItemListStart
+        \resumebullet{Compiled well production, entity and downhole data from databases for decline curve analysis }
+        \resumebullet{Modeled impact of factors like operator, date, lateral length, location on profitability metrics}
+        \resumebullet{Determined optimal drilling areas by analysis of net present value, decline rate and recovery}
+      \resumeItemListEnd   
+   \resumeSubMain
+      {Drilling Data Research Assistant}{- University of Texas at Austin }{May 2014 - May 2015}
+    \resumeItemListStart
+        \resumebullet{Created Bayesian belief network to process drilling sensor errors and generate alerts }
+        \resumebullet{Integrated calculated features such as Mechanical Specific Energy (MSE) to real time drilling data}
+        \resumebullet{Automated generating daily rig reports evaluating daily performance and generating recommendations }
+      \resumeItemListEnd         
+
+
+    % \resumeSubheading
+    %   {Lucena Research}{Atlanta, GA}
+    %   {Data Scientist}{Summer 2012 and 2013}
+    %   \resumeItemListStart
+    %     \resumeItem{Portfolio Management}
+    %       {Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
+    %     \resumeItem{QuantDesk}
+    %       {Python backend for a web application used by hedge fund managers for portfolio management.}
+    %   \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Georgia Institute of Technology}{Atlanta, GA}
+    %   {Research and Teaching Assistant}{Jan 2012 - Dec 2013}
+    %   \resumeItemListStart
+    %     \resumeItem{Research Assistant - Machine Learning}
+    %       {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
+    %     \resumeItem{Teaching Assistant - Computational Investing}
+    %       {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
+    %   \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Spark GraphX}
+      {Scala Spark graph analysis to find similar patients using PageRank, power iteration, and phenotyping}
+    \resumeSubItem{Spark MLlib}
+      {Predicted drug recall using NLP sentiment features with CNN/RNN model and PySpark pipeline}
+    \resumeSubItem{Deep Q-Learning}
+      {Recreated Deep Mind DQN net to win Atari games, analyzed performance w/ varying architecture}
+    \resumeSubItem{ML Trader}
+      {Developed market trading algo utilizing Q-Learning and market features such as volatility, momentum}
+    \resumeSubItem{CUDA CFD}
+      {Created GPU parrallized lattice fluid simulation using CUDA, optimized using NVIDIA profiler}
+    \resumeSubItem{HPC}
+      {Implemented multi-node distributed bucket sort using OpenMP and MPI library on HPC cluster using Slurm}
+    \resumeSubItem{NLP}
+      {Used Tweepy API, Beautiful Soup and NLTK to cluster relevant tweets and predict 2016 election sentiment}
+    \resumeSubItem{Cybersecurity}
+      {Implemented programs that accomplish CSRF, XSS, and SQL injection attacks}     
+    \resumeSubItem{Computer Vision}
+      {Conducted image analysis using neural nets, PCA and Kmeans to identify diseased food products}
+    \resumeSubItem{Embedded Smart Home}
+      {Created iOS app to control lights, HVAC and touch-screen display using Arduino}
+    \resumeSubItem{Time Series Analytics}
+      {Conducted PCA, Fourier and ARIMA analysis on time-series voltage data to predict outages}
+    \resumeSubItem{Reservoir Simulation}
+      {Reservoir simulators, fluid flow/properties, field project economics, value of info of sensor data}          
+  \resumeSubHeadingListEnd
+  \vspace{1pt}
+\section{Accomplishments }
+    \vspace{-5pt}\item{Co-author of SPE Paper, ``Self-Learning Probabilistic Detection and Alerting of Drillstring Washout'' \hfill May 2018
+    }\\
+    \vspace{-5pt}\item{Co-author of SPE Paper, ``A Novel Probabilistic Drilling Optimization Index'' \hfill May 2017}\\
+
+    \vspace{-5pt}\item{Recipient, UT Petroleum Engineering Department Scholarship \hfill Spring 2014 - Spring 2016}\\
+    \vspace{-5pt}\item{Recipient, National AP Scholar [Maximum Scores on 15 AP Exams] \hfill June 2012}\\
+% Co-author of SPE Journal Submission, “A Novel Probabilistic Drilling Optimization Index”	          May 2017 
+% Recipient, UT Petroleum Engineering Department Scholarship 			      Spring 2014 – Spring 2016
+% Recipient, National AP Scholar [Maximum Scores on 15 AP Exams]			         	         June 2012   
+
+%
+% % --------PROGRAMMING SKILLS------------
+% \section{Programming Skills}
+%  \resumeSubHeadingListStart
+
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
