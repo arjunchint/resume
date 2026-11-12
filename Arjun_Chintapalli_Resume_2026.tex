@@ -55,14 +55,13 @@
     \textbf{#1}{: #2}
   }
 }
-\newcommand{\resumebullet}[1]{
-  \item\fontsize{10.5pt}{12pt}\selectfont{{#1}
-  }
+\newcommand{\resumebullet}[1]{%
+  \item\fontsize{10.5pt}{12pt}\selectfont #1\unskip%
 }
 \newcommand{\resumeSubMain}[3]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l l @{\extracolsep{\fill}} r}
-      \textbf{#1} & \textit{{#2}} & \hfill{\textbf{#3}} \\
+    \begin{tabular*}{\linewidth}[t]{l @{\extracolsep{\fill}} r}
+      \textbf{#1}, \textit{#2} & \textbf{#3} \\
     \end{tabular*}\vspace{3pt}
 }
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-2pt}}
@@ -99,41 +98,43 @@
 
 %-----------EDUCATION-----------------
 \section{Education}
-{\bf Georgia Institute of Technology} \hfill{\bf \em Online M.S., Computer Science} \hfill {\bf December 2018} \\
+{\bf Georgia Institute of Technology} \hfill{\bf \em M.S., Computer Science} \hfill {\bf December 2018} \\
 {\bf Georgia Institute of Technology} \hfill{\bf \em M.S., Computational Engineering} \hfill {\bf December 2017} \\
 {\bf University of Texas at Austin} \hfill{\bf \em B.S., Petroleum Engineering Honors} \hfill {\bf May 2016} \\
-\textbf{Courses:} ML, RL, Algos, Numerical Linear Algebra, Parallel HPC, Machine Vision, DVA, InfoSec, Big Data
+\textbf{Courses:} ML, RL, Algos, CV, CyberSec, Simulation, CFD, Numerical Linear Algebra, Parallel HPC, Big Data
 \par\vspace{8pt}
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubMain
-      {Co-founder}{- Retriever AI}{November 2024 - Present}
+      {Co-founder}{\href{https://www.rtrvr.ai}{Retriever AI}}{November 2024 - Present}
       \resumeItemListStart
         \resumebullet{Built the first free, ad-supported browser agent that does web tasks, from finding leads to applying to jobs.}
         \resumebullet{Hit \#1 on WebBench (81.4\%) using our own accessibility trees: 11x faster, 25x cheaper than screenshot agents.}
         \resumebullet{Cut the cost of an agent task below one ad impression's revenue, so sponsored cards pay for the inference.}
         \resumebullet{Reached a 90\% cache hit rate via volatility-tiered prompts and sharded cache-key routing; cut token bill 90\%.}
-        \resumebullet{Built Code Mode: one-shot JS workflows calling web search, enrichment and MCP tools with browser context.}
+        \resumebullet{Built Code Mode, an engine that runs agent-written JS in a Chrome sandbox: one plan replaces 40--100 turns.}
+        \resumebullet{Built Vibe Hacking: agents find a site's GraphQL/REST APIs from its network calls, then scrape via API.}
         \resumebullet{Distilled millions of agent trajectories into reusable site skills through continual learning, cutting steps 27\%.}
-        \resumebullet{Built RL environments replicating hard sites from trajectories, for post-training partners: \href{https://www.rtrvr.ai/simulations}{rtrvr.ai/simulations}.}
+        \resumebullet{Built RL environments replicating SaaS sites from trajectories, for post-training partners: \href{https://www.rtrvr.ai/simulations}{rtrvr.ai/simulations}.}
         \resumebullet{Launched \href{https://www.rtrvr.ai/rover}{Rover}, an AI agent that websites embed to guide visitors and complete tasks for them.}
         \resumebullet{Grew to 35K+ users and 10M+ workflows; \$65K+ AppSumo sales, \$20K exclusive ad deal, \#3 Product Hunt.}
       \resumeItemListEnd
 
     \resumeSubMain
-      {ML Engineer}{- Google Ads}{December 2019 - November 2024}
+      {ML Engineer}{Google Ads}{December 2019 - November 2024}
       \resumeItemListStart
         \resumebullet{Trained ads targeting models on user search and browsing history and publisher site data for billions of users.}
         \resumebullet{Pioneered vertical federated learning on user data across Google products; drove \$200M lift on \$10B ad traffic.}
-        \resumebullet{Launched Google Ads' first JAX targeting model, trained across clusters on aggregated, noised gradients.}
+        \resumebullet{Launched Google Ads' first JAX targeting model on first-of-its-kind infra for TPU training and inference.}
+        \resumebullet{Wrote JAX kernels splitting model layers across clusters by silo; only masked, noised gradients leave each silo.}
         \resumebullet{Developed new private training via private set intersection, homomorphic encryption and differential privacy.}
         \resumebullet{Met a compliant privacy budget ($\varepsilon$) in training via k-means, gradient clipping and commutative gradient noise.}
       \resumeItemListEnd
 
     \resumeSubMain
-      {Senior Software Engineer}{- Capital One}{January 2018 - December 2019}
+      {Senior Software Engineer}{Capital One}{January 2018 - December 2019}
       \resumeItemListStart
         \resumebullet{Led AWS migration of the on-prem ETL that reconciles billions of dollars in daily card transactions.}
         \resumebullet{Built the data-lake intake that decrypts and sorts incoming files, streaming 100GB+ encrypted transfers.}
@@ -142,9 +143,10 @@
       \resumeItemListEnd
 
     \resumeSubMain
-      {Drilling Data Research}{- University of Texas at Austin}{May 2014 - August 2017}
+      {Drilling Data Research}{University of Texas at Austin}{May 2014 - August 2017}
       \resumeItemListStart
         \resumebullet{Built physics-based Bayesian models on rig sensor data to predict failures and recommend drilling parameters.}
+        \resumebullet{Launched the Bayesian rig-state classifier and drillstring-washout alert model, later published at SPE.}
         \resumebullet{Built the real-time cloud database and dashboards that fed rig sensor data to the models and engineers.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -165,7 +167,6 @@
 
 \section{Accomplishments}
   \resumeSubHeadingListStart
-    \resumebullet{Retriever AI: first ads-supported browser agent, \#1 WebBench, 35K+ users, \$65K+ AppSumo sales \hfill 2026}
     \resumebullet{Raised funding from Key Studio, the first ex-Googler accelerator, partnered with Google's AI Futures Fund \hfill 2026}
     \resumebullet{Co-author of SPE Paper, ``Self-Learning Probabilistic Detection and Alerting of Drillstring Washout'' \hfill May 2018}
     \resumebullet{Co-author of SPE Paper, ``A Novel Probabilistic Drilling Optimization Index'' \hfill May 2017}
